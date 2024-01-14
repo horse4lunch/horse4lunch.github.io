@@ -5,11 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlazorApp2</title>
-   <!-- <base href="/horse4lunch.github.io/" /> -->
+    <base href="/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="BlazorApp2.styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,12 +23,19 @@
         <div class="loading-progress-text"></div>
     </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
+    <app>Loading...</app>
+
     <script src="_framework/blazor.webassembly.js"></script>
+
+    <script>
+        function playAudio(audioUrl, volume) {
+            var audio = new Audio(audioUrl);
+            audio.volume = volume; // Set the volume
+            audio.play();
+        }
+    </script>
+
+    <script src="_content/BlazorApp2/BlazorApp2.bundle.scp.js"></script>
 </body>
 
 </html>
